@@ -1,14 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 2em;
 }
 
 body {
   background: black;
-  position: relative;
   color: white;
   text-align: center;
   font: normal 14pt "Courier New";
+  padding-top: 40px;
 }
 
 #conteudo {
@@ -16,6 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 #logo {
@@ -23,21 +29,54 @@ body {
   height: 40px;
 }
 
-img {
-  width: 1000px;
-  height: 600px;
-}
-
 #menu {
+  background-color: rgb(23, 26, 26);
   border: 1px darkcyan dashed;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 5px;
+  padding-top: 2px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
 }
+
 .padrao {
   border: 1px darkcyan dashed;
   margin: 10px 0;
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
+}
+
+img {
+  width: 800px;
+  height: 600px;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: rgb(23, 26, 26);
+}
+
+#menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+#menu ul li {
+  padding-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: yellowgreen;
+}
+
+a:hover {
+  color: darkgreen;
 }
